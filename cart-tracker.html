@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Tracker</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Cart Tracker</h1>
+    <div id="summary"></div>
+    
+    <div id="filters">
+        <button data-filter="all">All</button>
+        <button data-filter="use">In use</button>
+        <button data-filter="vacant">Iddle</button>
+        <button data-filter="spare">Spare</button>
+        <button id="addBtn">Add cart</button>
+    </div>
+    <div id="controls">
+        <input id="searchInput" type="search" placeholder="Search cart, name, location"></input>
+        <select id="locationSelect"></select>
+    </div>
+    
+    <div id="grid"></div>
+
+    <dialog id="editor">
+        <h2 id="editorTitle"></h2>
+        <label>Status
+            <select id="statusInput">
+                <option value="use">In use</option>
+                <option value="vacant">Iddle</option>
+                <option value="spare">Spare</option>
+            </select>
+        </label>
+        <label>Assigned to<input id="ownerInput"></label>
+        <label>Location<input id="locationInput"></label>
+        <button id="saveBtn">Save</button>     
+        <button id="cancelBtn">Cancel</button>
+        <button id="deleteBtn">Del</button>
+        </label>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>

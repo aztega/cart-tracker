@@ -1,0 +1,177 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f141c;
+    margin: 0;
+    padding: 16px;
+    color: white;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.tile {
+    background: #263142;
+    border-radius: 16px;
+    padding: 14px;
+    border-right: 10px solid gray;
+    cursor: pointer;
+}
+
+.tile p {
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.tile:hover{
+   
+    background: #263142;}
+
+.use {border-right-color: #0f6556;}
+.use {background: #0f9d84;}
+.vacant {border-right-color: #945b07}
+.vacant {background: #e08a0b}
+.spare {border-right-color: #5b6cf0};
+
+#filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    overflow-x: auto;
+}
+
+#filters button, #addBtn {
+    border: 1px solid #d5dbe5;
+    background:  #263142;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: white;
+}
+
+dialog {
+    border: 0px;
+    border-radius: 18px;
+    padding: 18px;
+    width: min(92vw, 400px);
+}
+
+dialog::backdrop {background: rgb(0,0,0,0.5);};
+
+dialog label {
+display: block;
+margin-top: 12px;
+color: #6b7788
+}
+
+dialog input, dialog select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 4px;
+    box-sizing: border-box;
+}
+
+dialog button {
+    margin-top: 16px;
+    margin-right: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+}
+
+#deleteBtn {
+    color: #c0392b;
+}
+
+#summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.stat {
+    background: #263142;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.stat b.summaryNum {
+    margin-right: 10px;
+    font-size: 1rem;
+    background: #0f141c;
+    padding: 5px;
+    width: 10px;
+    border-radius: 50%;
+}
+
+.stat span {
+color: white;
+font-size: 0.85rem;
+}
+
+.stat.big {
+    grid-column: 1/ -1;
+    background: #16202e;
+    color: white;
+    border: rgb(155, 154, 154) solid 1px;
+    margin-bottom: 10px;
+}
+
+.stat.big b {
+    font-size: 2.6rem;
+    border-radius: 50%;
+    padding: 5px;
+    background: #0f141c;
+    margin-right: 10px;
+
+}
+
+.stat.big span {
+    color: white;
+    font-size: 1rem;
+}
+
+#controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+#controls input {
+    flex: 1;
+    min-width: 0;
+     background: #16202e;
+     color: white;
+}
+
+#controls input,
+#controls select {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #d5dbe5;
+    border-radius: 12px;
+}
+
+#controls select {
+    max-width: 40%;
+     background: #16202e;
+     color: white;
+     border: none;
+}
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #6b7788;
+     background: #16202e;
+}
